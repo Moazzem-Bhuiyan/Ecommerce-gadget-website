@@ -1,0 +1,163 @@
+[
+    {
+      "id": 1,
+      "category": "camera",
+      "title": "4K Action Camera",
+      "price": 299,
+      "img": "https://i.ibb.co.com/hyjK6kJ/Frame-604.png",
+      "rating": "5"
+    },
+    {
+      "id": 2,
+      "category": "keyboard",
+      "title": "Mechanical Gaming Keyboard",
+      "price": 99,
+      "img": "https://i.ibb.co.com/92ZfRLq/Frame-612.png",
+        "rating": "5"
+    },
+    {
+      "id": 3,
+      "category": "monitor",
+      "title": "Curved 4K Monitor",
+      "price": 399,
+      "img": "https://i.ibb.co.com/NW17Vds/Frame-613.png",
+        "rating": "5"
+    },
+    {
+      "id": 4,
+      "category": "gamepad",
+      "title": "Wireless Gamepad",
+      "price": 59,
+      "img": "https://i.ibb.co.com/Hd7hmTs/GP11-PRD3-1.png",
+     "rating": "5"
+    },
+    {
+      "id": 5,
+      "category": "camera",
+      "title": "Mirrorless Camera X",
+      "price": 999,
+      "img": "https://i.ibb.co.com/hyjK6kJ/Frame-604.png",
+     "rating": "5"
+    },
+    {
+      "id": 6,
+      "category": "keyboard",
+      "title": "Wireless Mechanical Keyboard",
+      "price": 149,
+      "img": "https://i.ibb.co.com/92ZfRLq/Frame-612.png",
+        "rating": "4"
+    },
+    {
+      "id": 7,
+      "category": "monitor",
+      "title": "Ultra-Wide Monitor",
+      "price": 499,
+      "img": "https://i.ibb.co.com/NW17Vds/Frame-613.png",
+        "rating": "5"
+    },
+    {
+      "id": 8,
+      "category": "gamepad",
+      "title": "Bluetooth Gamepad Pro",
+      "price": 79,
+      "img": "https://i.ibb.co.com/Hd7hmTs/GP11-PRD3-1.png",
+        "rating": "5"
+    },
+    {
+      "id": 9,
+      "category": "camera",
+      "title": "Drone with 4K Camera",
+      "price": 499,
+      "img": "https://i.ibb.co.com/hyjK6kJ/Frame-604.png",
+        "rating": "5"
+    },
+    {
+      "id": 10,
+      "category": "keyboard",
+      "title": "RGB Backlit Keyboard",
+      "price": 79,
+      "img": "https://i.ibb.co.com/92ZfRLq/Frame-612.png",
+        "rating": "5"
+    },
+    {
+      "id": 11,
+      "category": "monitor",
+      "title": "Gaming Monitor 144Hz",
+      "price": 299,
+      "img": "https://i.ibb.co.com/NW17Vds/Frame-613.png",
+        "rating": "5"
+    },
+    {
+      "id": 12,
+      "category": "gamepad",
+      "title": "Xbox Controller",
+      "price": 64,
+      "img": "https://i.ibb.co.com/Hd7hmTs/GP11-PRD3-1.png",
+        "rating": "5"
+    },
+    {
+      "id": 13,
+      "category": "camera",
+      "title": "Compact Digital Camera",
+      "price": 399,
+      "img": "https://i.ibb.co.com/hyjK6kJ/Frame-604.png",
+        "rating": "5"
+    },
+    {
+      "id": 14,
+      "category": "keyboard",
+      "title": "Ergonomic Gaming Keyboard",
+      "price": 129,
+      "img": "https://i.ibb.co.com/92ZfRLq/Frame-612.png",
+        "rating": "4"
+    },
+    {
+      "id": 15,
+      "category": "monitor",
+      "title": "IPS LED Monitor",
+      "price": 249,
+      "img": "https://i.ibb.co.com/NW17Vds/Frame-613.png",
+        "rating": "3"
+    },
+    {
+      "id": 16,
+      "category": "gamepad",
+      "title": "PlayStation DualShock",
+      "price": 69,
+      "img": "https://i.ibb.co.com/Hd7hmTs/GP11-PRD3-1.png",
+        "rating": "5"
+    },
+    {
+      "id": 17,
+      "category": "camera",
+      "title": "Professional DSLR Camera",
+      "price": 1299,
+      "img": "https://i.ibb.co.com/hyjK6kJ/Frame-604.png",
+        "rating": "2"
+    },
+    {
+      "id": 18,
+      "category": "keyboard",
+      "title": "Wireless Mechanical Keyboard",
+      "price": 149,
+      "img": "https://i.ibb.co.com/92ZfRLq/Frame-612.png",
+        "rating": "5"
+    },
+    {
+      "id": 19,
+      "category": "monitor",
+      "title": "4K HDR Monitor",
+      "price": 599,
+      "img": "https://i.ibb.co.com/NW17Vds/Frame-613.png",
+        "rating": "5"
+    },
+    {
+      "id": 20,
+      "category": "gamepad",
+      "title": "Elite Gaming Gamepad",
+      "price": 99,
+      "img": "https://i.ibb.co.com/Hd7hmTs/GP11-PRD3-1.png",
+        "rating": "2"
+    }
+  ]
+  

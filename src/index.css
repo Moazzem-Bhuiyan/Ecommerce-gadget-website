@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  background-color: white;
+  color: black;
+}
+
+ul {
+  list-style: none; /* List এর bullet সরিয়ে দেয় */
+  padding: 0;
+}
+
+li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+li.active {
+  background-color: #4CAF50;
+  color: white;
+}
