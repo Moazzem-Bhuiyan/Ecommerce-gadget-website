@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
-
-
 const useData = () => {
 
     const [product,setProduct]=useState([])
 
     useEffect(()=>{
 
-        fetch('data.json')
+        fetch('http://localhost:5000/carts')
         .then(res=> res.json())
         .then(data=>setProduct(data))
     },[])

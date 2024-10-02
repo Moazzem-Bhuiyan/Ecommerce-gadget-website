@@ -11,6 +11,7 @@ import AuthDash from "../Pages/Auth/Authdash/AuthDash";
 import SignUp from "../Pages/Auth/SingUp/SignUp";
 import SignIn from "../Pages/Auth/Authdash/Signin/signIn";
 import ViewDetails from "../Pages/viewdetails/ViewDetails";
+import CartDetais from "../Pages/cartsDetails/CartDetais";
 
 export const router = createBrowserRouter([
   {
@@ -49,8 +50,12 @@ export const router = createBrowserRouter([
       {
         path: '/viewdetails/:id',
         element:<ViewDetails></ViewDetails>,
-        loader : ()=> fetch ('/data.json'),
-      }
+        loader : ()=> fetch ('http://localhost:5000/carts'),
+      },
+      {
+        path: "/cartDetails",
+        element: <CartDetais></CartDetais>
+      },
 
     ],
 

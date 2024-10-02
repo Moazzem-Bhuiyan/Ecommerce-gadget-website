@@ -1,20 +1,28 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { RouterProvider } from "react-router-dom";
+
+import "./index.css";
+import { router } from "./Routes/Routes";
+import AuthProvider from "./AuthProvider/AuthProvider";
+
+// tanstak query
 import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from "@tanstack/react-query";
 
-  RouterProvider,
-} from "react-router-dom";
+const queryClient = new QueryClient();
 
-import './index.css'
-import { router } from './Routes/Routes';
-
-
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <div className='max-w-screen-xl mx-auto'>
-    <RouterProvider router={router} />
-
-    </div>
-
-  </StrictMode>,
-)
+    <AuthProvider>
+      <QueryClientProvider client={queryClient}>
+        <div className="max-w-screen-xl mx-auto">
+          <RouterProvider router={router} />
+        </div>
+      </QueryClientProvider>
+    </AuthProvider>
+  </StrictMode>
+);
