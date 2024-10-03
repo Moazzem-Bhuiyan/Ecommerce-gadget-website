@@ -37,9 +37,9 @@ const Flashselse = () => {
 
       <div className="flex justify-center my-5 ">
         {" "}
-        <button className="bg-red-400 px-8 py-1 text-white rounded-md">
+       <Link to ='viewall'> <button className="bg-red-400 px-8 py-1 text-white rounded-md">
           View All Products
-        </button>{" "}
+        </button>{" "}</Link>
       </div>
     </div>
   );

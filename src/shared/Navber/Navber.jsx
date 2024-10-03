@@ -24,10 +24,10 @@ const Navber = () => {
     }).then((result) => {
       if (result.isConfirmed) {
 
-        logOut().then(() => {
+         logOut().then(() => {
       
-          navigate("/");
-        });
+      navigate("/");
+    });
 
        
       }
@@ -86,7 +86,6 @@ const Navber = () => {
         <div className="navbar-end">
           <div className="form-control">
             <input
-            
               type="text"
               placeholder="What are you looking for ?"
               className="input input-bordered w-24 bg-white h-8 mr-2  md:w-auto"

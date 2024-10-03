@@ -14,6 +14,8 @@ import ViewDetails from "../Pages/viewdetails/ViewDetails";
 import CartDetais from "../Pages/cartsDetails/CartDetais";
 import UserProfile from "../Pages/UserProfile/UserProfile";
 import PrivateAuth from "../Pages/Auth/PrivateAuth/PrivateAuth";
+import ViewAllProduct from "../Pages/viewdetails/ViewAllProduct/ViewAllProduct";
+
 
 export const router = createBrowserRouter([
   {
@@ -63,8 +65,10 @@ export const router = createBrowserRouter([
         element: <UserProfile></UserProfile>
       },
       {
-
+        path: "/viewall",
+        element: <ViewAllProduct></ViewAllProduct>
       }
+    
 
 
     ],
