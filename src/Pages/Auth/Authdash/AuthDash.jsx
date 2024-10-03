@@ -7,7 +7,7 @@ const AuthDash = () => {
 
     return (
 
-        <div className="grid gap-20 grid-cols-2 h-screen">
+        <div className="grid gap-20 md:grid-cols-2 h-screen">
 
             <div className="grid items-center">
                 <img src={auth} alt="" />

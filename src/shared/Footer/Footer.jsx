@@ -43,6 +43,12 @@ const Footer = () => {
           <a className="link link-hover">Cookie policy</a>
         </nav>
       </footer>
+
+      <footer className="footer footer-center bg-white text-black text-xl p-4">
+  <aside>
+    <p>Copyright © {new Date().getFullYear()} - All right reserved by Moazzem Bhuiyan</p>
+  </aside>
+</footer>
     </div>
   );
 };

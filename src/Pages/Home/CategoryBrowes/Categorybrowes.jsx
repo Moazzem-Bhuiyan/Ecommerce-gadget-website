@@ -16,32 +16,32 @@ const Categorybrowes = () => {
         ></SectionTitle>
       </section>
 
-      <div className="flex justify-evenly my-20 space-y-2 ">
+      <div className=" md:flex md:justify-evenly  justify-center my-20 space-y-2 p-10 md:p-0 ">
         <Link to ='/monitor'>
           <div className=" space-y-2 border p-10 mt-2">
-            <div><FiMonitor className="text-6xl" /></div>
-            <h1>Monitor</h1>
+            <div  className="flex justify-center"><FiMonitor className="text-6xl" /></div>
+            <h1 className="text-center">Monitor</h1>
           </div>
         </Link>
 
         <Link to='/keyboard'>
           <div className=" space-y-2  border p-10">
-            <div><GiKeyboard className="text-6xl" /></div>
-            <h1>KeyBoard</h1>
+            <div className="flex justify-center"><GiKeyboard className="text-6xl" /></div>
+            <h1 className="text-center">KeyBoard</h1>
           </div>
         </Link>
 
         <Link to='/camera'>
           <div className=" space-y-2  border p-10">
-            <div><CiCamera className="text-6xl" /></div>
-            <h1>Camera</h1>
+            <div  className="flex justify-center"><CiCamera className="text-6xl" /></div>
+            <h1 className="text-center">Camera</h1>
           </div>
         </Link>
 
         <Link to='gamepad'>
           <div className=" space-y-2  border p-10">
-           <div><LuGamepad className="text-6xl"  /></div>
-            <h1 className="">Game Pad</h1>
+           <div  className="flex justify-center"><LuGamepad className="text-6xl"  /></div>
+            <h1 className="text-center">Game Pad</h1>
           </div>
         </Link>
       </div>

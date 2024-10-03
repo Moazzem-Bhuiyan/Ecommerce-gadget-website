@@ -6,9 +6,46 @@ import { Authcontext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import axios from "axios";
 import usecarts from "../../Hooks/usecarts";
+import { useForm } from "react-hook-form"
+import useAxiospublic from "../../Hooks/useAxiospublic";
+
+
 
 const ViewDetails = () => {
 
+  const axiospublic=useAxiospublic();
+
+  const {
+    register,
+    handleSubmit,
+ 
+    formState: { errors },
+  } = useForm()
+
+  const onSubmit = (data) =>{ 
+    
+    console.log(data)
+
+    const userinfo ={
+
+      name : data.name,
+      address : data.address,
+      city:data.city,
+      phone : data.phone,
+      email :data. email
+    }
+
+    axiospublic.post('/usersinfo',userinfo)
+    .then(res=>{
+
+      if(res.data.insertedId){
+        console.log('user info save successfully')
+      }
+     
+    })
+
+
+}
   const [cart,refetch]=usecarts();
 
   const navigate = useNavigate();
@@ -82,7 +119,7 @@ const ViewDetails = () => {
 
   return (
     <div className=" w-[80%] m-auto my-20">
-      <div className=" grid gap-5 grid-cols-2">
+      <div className=" grid gap-5 md:grid-cols-2">
         <div className="bg-slate-50">
           <img className="w-80 m-auto" src={data.img} alt="" />
         </div>
@@ -99,8 +136,8 @@ const ViewDetails = () => {
           />
           <hr />
 
-          <div className="mt-10 text-2xl flex gap-10 ">
-            <div>
+          <div className="mt-10 text-2xl md:flex gap-10 ">
+            <div className="flex  justify-center lg:h-10 md:mt-10 gap-5">
               {" "}
               <button
                 className="border-l-2 rounded-md p-1 border-red-500 hover:bg-red-500"
@@ -108,7 +145,7 @@ const ViewDetails = () => {
               >
                 -
               </button>{" "}
-              {count}{" "}
+            <button>  {count}{" "}</button>
               <button
                 className="border-r-2 border-red-500 rounded-md p-1 hover:bg-red-500"
                 onClick={() => setCount(count + 1)}
@@ -116,10 +153,99 @@ const ViewDetails = () => {
                 +
               </button>
             </div>
+            
 
-            <button className="text-lg bg-red-500 text-white px-4 rounded-md">
-              Buy now
-            </button>
+           <div className=" flex justify-between gap-10 mt-10"> 
+
+
+          <button className="btn  outline-none border-none  bg-red-500 text-white " onClick={() => document.getElementById('my_modal_3').showModal()}>Buy Now </button>
+
+<dialog id="my_modal_3" className="modal bg-white ">
+  <div className="modal-box bg-white max-w-lg w-full">
+    <form method="dialog" className="space-y-4 " onSubmit={handleSubmit(onSubmit)}>
+      {/* Modal close button */}
+
+      <button type="button" className="btn btn-sm btn-circle  btn-ghost absolute right-2 top-2">✕</button>
+      
+      <h3 className="font-bold text-lg text-center">Fill Your Details</h3>
+      
+      {/* Name Input */}
+      <div className="form-control">
+        <label className="label">
+          <span className="label-text">Name</span>
+        </label>
+        <input 
+          type="text" 
+          {...register("name")}
+          placeholder="Enter your name" 
+          className="input input-bordered bg-white w-full" 
+          required 
+        />
+      </div>
+
+      {/* Address Input */}
+      <div className="form-control">
+        <label className="label">
+          <span className="label-text">Address</span>
+        </label>
+        <input 
+          type="text" 
+          {...register("address")}
+          placeholder="Enter your address" 
+          className="input input-bordered  bg-white w-full" 
+          required 
+        />
+      </div>
+
+      {/* City Input */}
+      <div className="form-control">
+        <label className="label">
+          <span className="label-text">City</span>
+        </label>
+        <input 
+          type="text" 
+          {...register("city")}
+          placeholder="Enter your city" 
+          className="input input-bordered bg-white w-full" 
+          required 
+        />
+      </div>
+
+      {/* Phone Number Input */}
+      <div className="form-control">
+        <label className="label">
+          <span className="label-text">Phone Number</span>
+        </label>
+        <input 
+          type="tel" 
+          {...register("phone")}
+          placeholder="Enter your phone number" 
+          className="input input-bordered  bg-white w-full" 
+          required 
+        />
+      </div>
+
+      {/* Email Input */}
+      <div className="form-control">
+        <label className="label">
+          <span className="label-text">Email</span>
+        </label>
+        <input 
+          type="email" 
+          {...register("email")}
+          placeholder="Enter your email" 
+          className="input input-bordered  bg-white w-full" 
+          required 
+        />
+      </div>
+
+      {/* Submit Button */}
+      <div className="form-control mt-4">
+        <button type="submit" className="btn btn-primary w-full">Submit</button>
+      </div>
+    </form>
+  </div>
+</dialog>
 
             <button>
               <FaHeart className=""></FaHeart>
@@ -130,7 +256,7 @@ const ViewDetails = () => {
               className="bg-black px-4 text-white  rounded-md text-lg"
             >
               Add To Cart{" "}
-            </button>
+            </button></div>
           </div>
         </div>
       </div>

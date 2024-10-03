@@ -8,7 +8,7 @@ import { Pagination } from "swiper/modules";
 const Banner = () => {
   return (
     <>
-      <div className="grid grid-cols-4 gap-5 my-20">
+      <div className="grid md:grid-cols-4 gap-5 my-20">
 
         <div className="col-span-1 border-r-2">
             <ul>
@@ -21,7 +21,7 @@ const Banner = () => {
             </ul>
         </div>
 
-        <div className="col-span-3 grid grid-cols-2 bg-black">
+        <div className="col-span-3 grid md:grid-cols-2 bg-black">
 
             <div className="text-white grid items-center">
 
@@ -29,14 +29,14 @@ const Banner = () => {
 
                 <h1 className="text-6xl ml-10 font-semibold">Up to 10% <br /> <span className="mt-2">of vouncher </span></h1>
 
-                    <button className="text-white">Shop Now </button>
+                    <button className="text-white mt-10 md:mt-0">Shop Now </button>
             </div>
 
-          <div className="">
+          <div className=" grid items-center ">
             <Swiper
               pagination={true}
               modules={[Pagination]}
-              className="mySwiper"
+              className="mySwiper w-80 md:w-auto"
             >
               <SwiperSlide>
                 <img src={h1} alt="" />

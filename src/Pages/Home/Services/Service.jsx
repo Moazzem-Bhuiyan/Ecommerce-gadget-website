@@ -10,21 +10,21 @@ const Service = () => {
         <SectionTitle title={"Services"}></SectionTitle>
       </section>
 
-      <div className=" flex justify-evenly">
+      <div className=" md:flex justify-evenly  ">
         <div>
-          <div className="flex justify-center">
+          <div className="flex justify-center ">
             <FaCarSide className="bg-black text-6xl rounded-full  border-8 p-2 text-white" />{" "}
           </div>
           <h1 className="text-center my-1">FREE AND FAST DELIVERY</h1>
-          <p>Free delivery for all orders over $140</p>
+          <p className="text-center">Free delivery for all orders over $140</p>
         </div>
-        <div>
+        <div className="my-10 md:my-0">
           <div className="flex justify-center">
             {" "}
             <FaHeadphonesSimple className="bg-black text-6xl rounded-full border-8 p-2 text-white" />
           </div>
           <h1 className="text-center my-1">FREE AND FAST DELIVERY</h1>
-          <p>Free delivery for all orders over $140</p>
+          <p className="text-center" >Free delivery for all orders over $140</p>
         </div>
         <div>
           <div className="flex justify-center">
@@ -32,7 +32,7 @@ const Service = () => {
             <IoShieldCheckmarkOutline className="bg-black text-6xl rounded-full border-8 p-2 text-white" />
           </div>
           <h1 className="text-center my-1">FREE AND FAST DELIVERY</h1>
-          <p>Free delivery for all orders over $140</p>
+          <p className="text-center">Free delivery for all orders over $140</p>
         </div>
       </div>
     </div>

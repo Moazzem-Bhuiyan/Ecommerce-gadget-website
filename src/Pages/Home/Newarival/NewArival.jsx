@@ -8,7 +8,7 @@ const NewArival = () => {
   return (
     <div>
         <section><SectionTitle subtitle={'Featured'} title={'New Arrival'}></SectionTitle></section>
-      <div className="grid grid-cols-4 gap-10 my-10 ">
+      <div className="grid md:grid-cols-4 p-10 md:p-0 gap-10 my-10 ">
         <div className=" col-span-2 row-span-2 bg-black">
           <img src={n1} alt="" />
         </div>

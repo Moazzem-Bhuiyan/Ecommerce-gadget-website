@@ -16,7 +16,7 @@ const Camera = () => {
             title={"Monitor"}
           ></SectionTitle>
         </section>
-        <div className="grid grid-cols-3 gap-5 my-20">
+        <div className="grid md:grid-cols-3 gap-5 my-20">
           {keyboard.map((monitor) => (
             <CategoryCard item={monitor}></CategoryCard>
           ))}

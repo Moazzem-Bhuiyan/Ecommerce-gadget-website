@@ -12,6 +12,8 @@ import SignUp from "../Pages/Auth/SingUp/SignUp";
 import SignIn from "../Pages/Auth/Authdash/Signin/signIn";
 import ViewDetails from "../Pages/viewdetails/ViewDetails";
 import CartDetais from "../Pages/cartsDetails/CartDetais";
+import UserProfile from "../Pages/UserProfile/UserProfile";
+import PrivateAuth from "../Pages/Auth/PrivateAuth/PrivateAuth";
 
 export const router = createBrowserRouter([
   {
@@ -49,13 +51,21 @@ export const router = createBrowserRouter([
 
       {
         path: '/viewdetails/:id',
-        element:<ViewDetails></ViewDetails>,
+        element:<PrivateAuth> <ViewDetails></ViewDetails> </PrivateAuth>,
         loader : ()=> fetch ('http://localhost:5000/carts'),
       },
       {
         path: "/cartDetails",
         element: <CartDetais></CartDetais>
       },
+      {
+        path: "/userProfile",
+        element: <UserProfile></UserProfile>
+      },
+      {
+
+      }
+
 
     ],
 
