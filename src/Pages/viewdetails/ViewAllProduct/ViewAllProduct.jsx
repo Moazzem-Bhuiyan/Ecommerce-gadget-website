@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import useData from '../../../Hooks/useData';
 import SectionTitle from '../../../shared/SectionTitle/SectionTitle';
 import { Link } from 'react-router-dom';
 import { Rating } from '@mui/material';
 import { FaEye } from 'react-icons/fa';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 
 const ViewAllProduct = () => {
     const { product } = useData();
@@ -12,6 +14,10 @@ const ViewAllProduct = () => {
     const filteredProducts = product.filter(item =>
         item.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+    useEffect(() => {
+        AOS.init({ duration: 1000 }); // Initialize AOS
+    }, []);
 
     return (
         <div>
@@ -29,10 +35,10 @@ const ViewAllProduct = () => {
                 />
             </div>
 
-            <div className="grid md:grid-cols-4 p-5 md:p-0 gap-5 my-10 relative">
+            <div className="grid md:grid-cols-4 p-10 md:p-0 gap-5 my-10 relative">
                 {filteredProducts.map((item) => (
                     <Link to={`/viewdetails/${item.id}`} key={item.id}>
-                        <div className="rounded-md">
+                        <div className="rounded-md" data-aos="fade-up">
                             <div className="w-full bg-slate-50">
                                 <img className="h-52 p-5 md:w-[80%] m-auto" src={item.img} alt={item.title} />
                             </div>
@@ -51,14 +57,6 @@ const ViewAllProduct = () => {
                         </div>
                     </Link>
                 ))}
-            </div>
-
-            <div className="flex justify-center my-5">
-                <Link to='viewall'>
-                    <button className="bg-red-400 px-8 py-1 text-white rounded-md">
-                        View All Products
-                    </button>
-                </Link>
             </div>
         </div>
     );

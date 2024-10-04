@@ -13,7 +13,7 @@ const Camera = () => {
         <section>
           <SectionTitle
             subtitle={"All Products"}
-            title={"Monitor"}
+            title={"Camera"}
           ></SectionTitle>
         </section>
         <div className="grid md:grid-cols-3 gap-5 my-20">

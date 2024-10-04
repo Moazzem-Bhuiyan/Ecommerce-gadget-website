@@ -5,12 +5,12 @@ import { Authcontext } from "../../../AuthProvider/AuthProvider";
 import useAxiospublic from "../../../Hooks/useAxiospublic";
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
+import { motion } from "framer-motion";
 
 const SignUp = () => {
-  const axiospublic = useAxiospublic(); // Typo fixed
+  const axiospublic = useAxiospublic();
   const { googlesingin } = useContext(Authcontext);
   const navigate = useNavigate();
-
   const { createUser } = useContext(Authcontext);
 
   const {
@@ -68,52 +68,89 @@ const SignUp = () => {
 
   return (
     <div className="">
-      <h1 className="text-4xl my-2 pl-8 md:pl-0">Create an account</h1>
-      <p className="font-semibold pl-8 md:pl-0 mb-10">Enter your details below</p>
+      <motion.h1
+        className="text-4xl my-2 pl-8 md:pl-0"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        Create an account
+      </motion.h1>
+      <motion.p
+        className="font-semibold pl-8 md:pl-0 mb-10"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        Enter your details below
+      </motion.p>
 
-      <form onSubmit={handleSubmit(onSubmit)} className=" space-y-8 p-4 md:p-0">
-        <input
-          className=" outline-none border-b-2 bg-white md:w-3/4 w-full text-xl"
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="space-y-8 p-4 md:p-0"
+      >
+        <motion.input
+          className="outline-none border-b-2 bg-white md:w-3/4 w-full text-xl"
           type="text"
           {...register("name", { required: true })}
           placeholder="Name"
-        />{" "}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        />
         <br />
-        <input
-          className=" outline-none border-b-2 bg-white md:w-3/4 w-full text-xl"
+        <motion.input
+          className="outline-none border-b-2 bg-white md:w-3/4 w-full text-xl"
           type="email"
           {...register("email", { required: true })}
           placeholder="Email"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
         />
         <br />
-        <input
-          className=" outline-none border-b-2 bg-white md:w-3/4 w-full text-xl"
+        <motion.input
+          className="outline-none border-b-2 bg-white md:w-3/4 w-full text-xl"
           type="password"
           {...register("password", { required: true })}
           placeholder="Password"
-        />{" "}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        />
         <br />
-        <input
-          className=" md:w-3/4 w-full bg-rose-600 py-1 rounded-sm text-white text-lg cursor-pointer"
+        <motion.input
+          className="md:w-3/4 w-full bg-rose-600 py-1 rounded-sm text-white text-lg cursor-pointer"
           type="submit"
           value="Create Account"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
         />
         <br />
 
-        <input
+        <motion.input
           onClick={googleSignIn}
-          className=" md:w-3/4 w-full bg-white py-1 border border-black rounded-sm text-black text-lg cursor-pointer"
+          className="md:w-3/4 w-full bg-white py-1 border border-black rounded-sm text-black text-lg cursor-pointer"
           type="button"
-          value=" SignUp With Google"
+          value="Sign Up With Google"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
         />
       </form>
 
-      <h1 className="mt-5 p-3 md:p-0">
+      <motion.h1
+        className="mt-5 p-3 md:p-0"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
+      >
         Already Have an Account?{" "}
         <Link to="/auth/signin">
-          <span className=" underline text-blue-500">Login</span>
+          <span className="underline text-blue-500">Login</span>
         </Link>
-      </h1>
+      </motion.h1>
     </div>
   );
 };

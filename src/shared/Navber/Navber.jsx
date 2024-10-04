@@ -12,7 +12,6 @@ const Navber = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -20,21 +19,14 @@ const Navber = () => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes,Logout !"
+      confirmButtonText: "Yes, Logout!"
     }).then((result) => {
       if (result.isConfirmed) {
-
-         logOut().then(() => {
-      
-      navigate("/");
-    });
-
-       
+        logOut().then(() => {
+          navigate("/");
+        });
       }
     });
-
-
-   
   };
 
   const navlink = (
@@ -59,16 +51,16 @@ const Navber = () => {
   );
 
   return (
-    <div className="">
-      <div className="navbar bg-white">
+    <div className="w-full fixed top-0 left-0 z-[100] bg-white shadow-md">
+      <div className="navbar max-w-7xl mx-auto px-4">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className=" btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn-ghost lg:hidden">
               <IoMenu className="text-2xl" />
             </div>
             <ul
               tabIndex={0}
-              className=" menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               {/*  */}
               {navlink}
@@ -77,17 +69,14 @@ const Navber = () => {
           <a className="btn btn-ghost text-xl">Exclusive</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {/*  */}
-            {navlink}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{navlink}</ul>
         </div>
 
         <div className="navbar-end">
           <div className="form-control">
             <input
               type="text"
-              placeholder="What are you looking for ?"
+              placeholder="What are you looking for?"
               className="input input-bordered w-24 bg-white h-8 mr-2  md:w-auto"
             />
           </div>
@@ -124,19 +113,21 @@ const Navber = () => {
             className="btn btn-ghost btn-circle avatar"
           >
             <div className="w-10 rounded-full">
-
-            { user && user.photoURL ? 
-              <img 
-              
-              src={user?.photoURL} />: <FaUser className=" mt-2 text-2xl ml-2"></FaUser> }
+              {user && user.photoURL ? (
+                <img src={user?.photoURL} alt="user profile" />
+              ) : (
+                <FaUser className="mt-2 text-2xl ml-2"></FaUser>
+              )}
             </div>
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-500 ...  bg-opacity-30 text-white rounded-box z-[50] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-500 bg-opacity-30 text-white rounded-box z-[50] mt-3 w-52 p-2 shadow"
           >
             <li>
-           <Link to ='/userProfile'>   <a className="justify-between">Profile</a> </Link>
+              <Link to="/userProfile">
+                <a className="justify-between">Profile</a>
+              </Link>
             </li>
             <li>
               <a>Settings</a>

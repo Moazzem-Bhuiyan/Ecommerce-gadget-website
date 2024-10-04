@@ -2,66 +2,79 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import h1 from "../../../assets/banner/h1.png";
-
 import { Pagination } from "swiper/modules";
+import { motion } from "framer-motion"; // Importing Framer Motion
 
 const Banner = () => {
   return (
-    <>
-      <div className="grid md:grid-cols-4 gap-5 my-20">
-
-        <div className="col-span-1 border-r-2">
-            <ul>
-                <li> Woman’s Fashion</li>
-                <li>Men’s Fashion</li>
-                <li>Electronics</li>
-                <li>Home & Lifestyle</li>
-                <li>Medicine</li>
-                <li>Sports & Outdoor</li>
-            </ul>
-        </div>
-
-        <div className="col-span-3 grid md:grid-cols-2 bg-black">
-
-            <div className="text-white grid items-center">
-
-                <button></button>
-
-                <h1 className="text-6xl ml-10 font-semibold">Up to 10% <br /> <span className="mt-2">of vouncher </span></h1>
-
-                    <button className="text-white mt-10 md:mt-0">Shop Now </button>
-            </div>
-
-          <div className=" grid items-center ">
-            <Swiper
-              pagination={true}
-              modules={[Pagination]}
-              className="mySwiper w-80 md:w-auto"
+    <div className="grid md:grid-cols-4 gap-5 my-20 mt-28">
+      {/* Animated Categories Section */}
+      <div className="col-span-1 border-r-2">
+        <ul>
+          {/* Adding animations to each list item */}
+          {["Woman’s Fashion", "Men’s Fashion", "Electronics", "Home & Lifestyle", "Medicine", "Sports & Outdoor"].map((item, index) => (
+            <motion.li 
+              key={index} 
+              initial={{ opacity: 0, y: -10 }} // Initial state
+              animate={{ opacity: 1, y: 0 }}    // Animated state
+              transition={{ duration: 0.5, delay: index * 0.1 }} // Adding delay for staggered animation
+              className="my-2" // Add some margin to each list item
             >
-              <SwiperSlide>
-                <img src={h1} alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={h1} alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={h1} alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={h1} alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={h1} alt="" />
-              </SwiperSlide>
-            </Swiper>
-          </div>
+              {item}
+            </motion.li>
+          ))}
+        </ul>
+      </div>
 
+      <div className="col-span-3 grid md:grid-cols-2 bg-black">
+        <div className="text-white grid items-center">
+          {/* Animated Heading */}
+          <motion.h1 
+            className="text-6xl ml-10 font-semibold"
+            initial={{ opacity: 0, x: -50 }} // Initial state
+            animate={{ opacity: 1, x: 0 }}    // Animated state
+            transition={{ duration: 0.5 }}     // Transition properties
+          >
+            Up to 10% <br />
+            <span className="mt-2">of voucher</span>
+          </motion.h1>
 
+          {/* Animated Button */}
+          <motion.button
+            className="text-white mt-10 md:mt-0"
+            initial={{ scale: 0 }} // Initial scale
+            animate={{ scale: 1 }}  // Animated scale
+            transition={{ duration: 0.5 }} // Transition properties
+          >
+            Shop Now
+          </motion.button>
         </div>
 
-
+        <div className="grid items-center">
+          <Swiper
+            pagination={true}
+            modules={[Pagination]}
+            className="mySwiper w-80 md:w-auto"
+          >
+            <SwiperSlide>
+              <img src={h1} alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={h1} alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={h1} alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={h1} alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={h1} alt="" />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
