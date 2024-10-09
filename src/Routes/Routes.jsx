@@ -61,7 +61,7 @@ export const router = createBrowserRouter([
             <ViewDetails></ViewDetails>{" "}
           </PrivateAuth>
         ),
-        loader: () => fetch("https://recap-gadget.vercel.app/carts"),
+        loader: () => fetch("https://update-gadget.vercel.app/carts"),
       },
       {
         path: "/cartDetails",

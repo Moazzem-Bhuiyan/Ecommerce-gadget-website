@@ -5,7 +5,7 @@ const useData = () => {
 
     useEffect(()=>{
 
-        fetch('https://recap-gadget.vercel.app/carts')
+        fetch('https://update-gadget.vercel.app/carts')
         .then(res=> res.json())
         .then(data=>setProduct(data))
     },[])
