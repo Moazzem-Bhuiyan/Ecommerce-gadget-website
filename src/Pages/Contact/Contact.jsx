@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion"; // Importing Framer Motion
 
-const ContactForm = () => {
+const Contact = () => {
   const {
     register,
     handleSubmit,
@@ -97,4 +97,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default Contact ;
