@@ -9,14 +9,14 @@ import Camera from "../Pages/Camera/Camera";
 import GamePad from "../Pages/Gamepad/GamePad";
 import AuthDash from "../Pages/Auth/Authdash/AuthDash";
 import SignUp from "../Pages/Auth/SingUp/SignUp";
-import SignIn from "../Pages/Auth/Authdash/Signin/signIn";
+
 import ViewDetails from "../Pages/viewdetails/ViewDetails";
 import CartDetais from "../Pages/cartsDetails/CartDetais";
 import UserProfile from "../Pages/UserProfile/UserProfile";
 import PrivateAuth from "../Pages/Auth/PrivateAuth/PrivateAuth";
 import ViewAllProduct from "../Pages/viewdetails/ViewAllProduct/ViewAllProduct";
 import ContactForm from "../Pages/Contact/contact";
-
+import Signinn from "../Pages/Auth/Authdash/Signin/Signinn";
 
 export const router = createBrowserRouter([
   {
@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <ContactForm></ContactForm>
+        element: <ContactForm></ContactForm>,
       },
       {
         path: "/about",
@@ -53,48 +53,42 @@ export const router = createBrowserRouter([
       },
 
       {
-        path: '/viewdetails/:id',
-        element:<PrivateAuth> <ViewDetails></ViewDetails> </PrivateAuth>,
-        loader : ()=> fetch ('https://recap-gadget.vercel.app/carts'),
+        path: "/viewdetails/:id",
+        element: (
+          <PrivateAuth>
+            {" "}
+            <ViewDetails></ViewDetails>{" "}
+          </PrivateAuth>
+        ),
+        loader: () => fetch("https://recap-gadget.vercel.app/carts"),
       },
       {
         path: "/cartDetails",
-        element: <CartDetais></CartDetais>
+        element: <CartDetais></CartDetais>,
       },
       {
         path: "/userProfile",
-        element: <UserProfile></UserProfile>
+        element: <UserProfile></UserProfile>,
       },
       {
         path: "/viewall",
-        element: <ViewAllProduct></ViewAllProduct>
-      }
-    
-
-
+        element: <ViewAllProduct></ViewAllProduct>,
+      },
     ],
-
-
-    
   },
 
   {
-
-    path: '/auth',
+    path: "/auth",
     element: <AuthDash></AuthDash>,
-    children:[
-
+    children: [
       {
-        path:'signup',
-        element:<SignUp></SignUp>
+        path: "signup",
+        element: <SignUp></SignUp>,
       },
       {
-        path:'signin',
-        element:<SignIn></SignIn>
+        path: "signin",
+        element: <Signinn></Signinn>
       },
-    ]
-
-  }
-  
- 
+    ],
+  },
 ]);
