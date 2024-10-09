@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layouts/Main/Main";
 import Home from "../Pages/Home/Home/Home";
-import Contact from "../Pages/Contact/contact";
+
 import About from "../Pages/Contact/About/About";
 import Monitor from "../Pages/Monitor/Monitor";
 import KeyBoard from "../Pages/KeyBoard/KeyBoard";
