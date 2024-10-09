@@ -55,7 +55,7 @@ export const router = createBrowserRouter([
       {
         path: '/viewdetails/:id',
         element:<PrivateAuth> <ViewDetails></ViewDetails> </PrivateAuth>,
-        loader : ()=> fetch ('https://ecommerce-gadget-flame.vercel.app/carts'),
+        loader : ()=> fetch ('https://recap-gadget.vercel.app/carts'),
       },
       {
         path: "/cartDetails",

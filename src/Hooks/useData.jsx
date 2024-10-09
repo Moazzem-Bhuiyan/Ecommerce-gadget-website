@@ -5,7 +5,7 @@ const useData = () => {
 
     useEffect(()=>{
 
-        fetch('https://ecommerce-gadget-flame.vercel.app/carts')
+        fetch('https://recap-gadget.vercel.app/carts')
         .then(res=> res.json())
         .then(data=>setProduct(data))
     },[])

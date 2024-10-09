@@ -10,7 +10,7 @@ const usecarts = () => {
         queryKey:['carts'],
         queryFn: async()=>{
 
-            const res = await axiossecure.get('https://ecommerce-gadget-flame.vercel.app/cartsadd')
+            const res = await axiossecure.get('https://recap-gadget.vercel.app/cartsadd')
             return res.data
         }
 

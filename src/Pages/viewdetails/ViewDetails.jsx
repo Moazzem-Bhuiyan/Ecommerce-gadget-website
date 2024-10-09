@@ -53,7 +53,7 @@ const ViewDetails = () => {
       price: data.price,
     };
 
-    axios.post('https://ecommerce-gadget-flame.vercel.app/cartsadd', cartItem)
+    axios.post('https://recap-gadget.vercel.app/cartsadd', cartItem)
       .then(res => {
         if (res.data.insertedId) {
           Swal.fire({
