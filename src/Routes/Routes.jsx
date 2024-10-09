@@ -16,7 +16,8 @@ import UserProfile from "../Pages/UserProfile/UserProfile";
 import PrivateAuth from "../Pages/Auth/PrivateAuth/PrivateAuth";
 import ViewAllProduct from "../Pages/viewdetails/ViewAllProduct/ViewAllProduct";
 import Signinn from "../Pages/Auth/Authdash/Signin/Signinn";
-import Contact from "../Pages/Contact/contact";
+import Contact from "../Pages/Auth/SingUp/Contact";
+
 
 export const router = createBrowserRouter([
   {
