@@ -12,8 +12,8 @@ const Service = () => {
   }, []);
 
   return (
-    <div className="my-32">
-      <section>
+    <div className=" md:mt-[600px] mt-[700px]">
+      <section className="">
         <SectionTitle title={"Services"} />
       </section>
 

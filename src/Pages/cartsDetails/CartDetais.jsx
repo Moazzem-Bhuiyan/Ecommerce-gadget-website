@@ -36,9 +36,9 @@ const CartDetails = () => {
 
   return (
     <div>
-      <div>
-        <h1>Total Add Item : {cart.length} </h1>
-        <h1>Total Price : ${totalPrice}</h1>
+      <div  className="mt-28">
+        <h1 className="text-2xl">Total Add Item : {cart.length} </h1>
+        <h1 className="text-2xl">Total Price : ${totalPrice}</h1>
 
         <div>
           <div className="overflow-x-auto">

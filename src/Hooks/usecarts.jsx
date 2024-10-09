@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+
 import useAxiosSeceure from "./useAxiosSeceure";
 
 
@@ -10,7 +10,7 @@ const usecarts = () => {
         queryKey:['carts'],
         queryFn: async()=>{
 
-            const res = await axiossecure.get('/cartsadd')
+            const res = await axiossecure.get('https://ecommerce-gadget-flame.vercel.app/cartsadd')
             return res.data
         }
 

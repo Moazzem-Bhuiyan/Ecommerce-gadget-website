@@ -13,7 +13,7 @@ const NewArrival = () => {
   }, []);
 
   return (
-    <div>
+    <div className="h-[50vh]">
       <section>
         <SectionTitle subtitle={'Featured'} title={'New Arrival'} />
       </section>
